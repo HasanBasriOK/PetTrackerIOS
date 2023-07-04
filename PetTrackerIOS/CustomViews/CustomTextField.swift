@@ -16,6 +16,7 @@ class CustomTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.translatesAutoresizingMaskIntoConstraints = false
         
     }
     
@@ -49,7 +50,7 @@ class CustomTextField: UITextField {
             self.isSecureTextEntry = isSecure
         }
         
-        self.placeholder = placeholder
+        self.placeholder = "  \(placeholder)"
         self.layer.cornerRadius = 10.0
         self.layer.borderWidth = 2.0
         self.layer.borderColor = CGColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
