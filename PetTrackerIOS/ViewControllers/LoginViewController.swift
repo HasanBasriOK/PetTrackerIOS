@@ -8,6 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let loginImageView = UIImageView()
+    let usernameTextField = CustomTextField(placeholder: "Username", leftIcon: UIImage(named:"personIcon")!, isSecure: false)
+    let passwordTextField = CustomTextField(placeholder: "Password", leftIcon: UIImage(named:"passkeyIcon")!, isSecure: true)
+    let loginButton = CustomButton(caption: "Login")
+    let registerButton = CustomButton(caption: "Register")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,18 +21,13 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         initViewObjects()
-        
+        initActions()
     }
     
     func initViewObjects(){
-        let loginImageView = UIImageView()
+       
         loginImageView.image = UIImage(named:"cute-dogs")
         loginImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let usernameTextField = CustomTextField(placeholder: "Username", leftIcon: UIImage(named:"personIcon")!, isSecure: false)
-        
-        let passwordTextField = CustomTextField(placeholder: "Password", leftIcon: UIImage(named:"passkeyIcon")!, isSecure: true)
-        
         
         let containerView = UIView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,6 +36,8 @@ class LoginViewController: UIViewController {
         containerView.addSubview(loginImageView)
         containerView.addSubview(usernameTextField)
         containerView.addSubview(passwordTextField)
+        containerView.addSubview(loginButton)
+        containerView.addSubview(registerButton)
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -48,7 +51,7 @@ class LoginViewController: UIViewController {
             loginImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 180),
             loginImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginImageView.widthAnchor.constraint(equalToConstant: 250),
-            loginImageView.heightAnchor.constraint(equalToConstant: 150)
+            loginImageView.heightAnchor.constraint(equalToConstant: 180)
         ])
       
         
@@ -66,6 +69,45 @@ class LoginViewController: UIViewController {
             passwordTextField.widthAnchor.constraint(equalToConstant: 300),
             passwordTextField.heightAnchor.constraint(equalToConstant: 60)
         ])
+        
+        NSLayoutConstraint.activate([
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
+            loginButton.leadingAnchor.constraint(equalTo:passwordTextField.leadingAnchor),
+            loginButton.widthAnchor.constraint(equalToConstant: 300),
+            loginButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        NSLayoutConstraint.activate([
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 10),
+            registerButton.leadingAnchor.constraint(equalTo:passwordTextField.leadingAnchor),
+            registerButton.widthAnchor.constraint(equalToConstant: 300),
+            registerButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+    }
+    
+    func initActions(){
+        loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+    }
+    
+}
+
+//Actions
+extension LoginViewController {
+    
+    @objc func login() {
+        
+        let enteredUsername = self.usernameTextField.text ?? ""
+        let enteredPassword = self.passwordTextField.text ?? ""
+        
+        if enteredUsername.isEmpty || enteredPassword.isEmpty {
+            
+            AlertHelper.showBasicAlert(message: UserMessageConstants.loginValidationFailedMessage, viewController: self)
+        }
+        
+    }
+    
+    @objc func register() {
         
     }
     

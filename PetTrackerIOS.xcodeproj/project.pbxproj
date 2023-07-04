@@ -12,6 +12,9 @@
 		01CFA01D2A54991D0003D55A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA01C2A54991D0003D55A /* RegisterViewController.swift */; };
 		01CFA0202A5499410003D55A /* UserApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA01F2A5499410003D55A /* UserApiManager.swift */; };
 		01CFA0242A549A3F0003D55A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0232A549A3F0003D55A /* CustomTextField.swift */; };
+		01CFA0262A54B8160003D55A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0252A54B8160003D55A /* CustomButton.swift */; };
+		01CFA0282A54BE2A0003D55A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0272A54BE2A0003D55A /* AlertHelper.swift */; };
+		01CFA02C2A54BF230003D55A /* UserMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */; };
 		01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */; };
 		01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */; };
 		01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FAB2A50EBB200FC1E71 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		01CFA01C2A54991D0003D55A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		01CFA01F2A5499410003D55A /* UserApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiManager.swift; sourceTree = "<group>"; };
 		01CFA0232A549A3F0003D55A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		01CFA0252A54B8160003D55A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		01CFA0272A54BE2A0003D55A /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageConstants.swift; sourceTree = "<group>"; };
 		01DE9FA42A50EBB100FC1E71 /* PetTrackerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTrackerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				01CFA0232A549A3F0003D55A /* CustomTextField.swift */,
+				01CFA0252A54B8160003D55A /* CustomButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		01CFA0192A5498C50003D55A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				01CFA0272A54BE2A0003D55A /* AlertHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -123,6 +131,22 @@
 				01CFA01F2A5499410003D55A /* UserApiManager.swift */,
 			);
 			path = ApiManagers;
+			sourceTree = "<group>";
+		};
+		01CFA0292A54BF0C0003D55A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01CFA02A2A54BF140003D55A /* Constants */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01CFA02A2A54BF140003D55A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		01DE9F9B2A50EBB100FC1E71 = {
@@ -148,6 +172,7 @@
 		01DE9FA62A50EBB100FC1E71 /* PetTrackerIOS */ = {
 			isa = PBXGroup;
 			children = (
+				01CFA0292A54BF0C0003D55A /* Models */,
 				01CFA0192A5498C50003D55A /* Utilities */,
 				01CFA0182A5498B90003D55A /* Managers */,
 				01CFA0172A54984E0003D55A /* CustomViews */,
@@ -311,11 +336,14 @@
 			files = (
 				01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */,
 				01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */,
+				01CFA0262A54B8160003D55A /* CustomButton.swift in Sources */,
 				01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */,
 				01CFA0202A5499410003D55A /* UserApiManager.swift in Sources */,
 				01CFA0242A549A3F0003D55A /* CustomTextField.swift in Sources */,
 				01CFA01D2A54991D0003D55A /* RegisterViewController.swift in Sources */,
 				01CFA01B2A5499110003D55A /* LoginViewController.swift in Sources */,
+				01CFA0282A54BE2A0003D55A /* AlertHelper.swift in Sources */,
+				01CFA02C2A54BF230003D55A /* UserMessageConstants.swift in Sources */,
 				01016BFE2A545D9A00BE7787 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
