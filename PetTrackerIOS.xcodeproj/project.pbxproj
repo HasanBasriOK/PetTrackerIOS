@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01016BFE2A545D9A00BE7787 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01016BFD2A545D9A00BE7787 /* HomeViewController.swift */; };
+		01CFA01B2A5499110003D55A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA01A2A5499110003D55A /* LoginViewController.swift */; };
+		01CFA01D2A54991D0003D55A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA01C2A54991D0003D55A /* RegisterViewController.swift */; };
+		01CFA0202A5499410003D55A /* UserApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA01F2A5499410003D55A /* UserApiManager.swift */; };
+		01CFA0242A549A3F0003D55A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0232A549A3F0003D55A /* CustomTextField.swift */; };
 		01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */; };
 		01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */; };
 		01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FAB2A50EBB200FC1E71 /* ViewController.swift */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		01016BFD2A545D9A00BE7787 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01CFA01A2A5499110003D55A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01CFA01C2A54991D0003D55A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		01CFA01F2A5499410003D55A /* UserApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiManager.swift; sourceTree = "<group>"; };
+		01CFA0232A549A3F0003D55A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		01DE9FA42A50EBB100FC1E71 /* PetTrackerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTrackerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01CFA0162A5498400003D55A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01016BFD2A545D9A00BE7787 /* HomeViewController.swift */,
+				01CFA01A2A5499110003D55A /* LoginViewController.swift */,
+				01CFA01C2A54991D0003D55A /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01CFA0172A54984E0003D55A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				01CFA0232A549A3F0003D55A /* CustomTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		01CFA0182A5498B90003D55A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				01CFA01E2A5499240003D55A /* ApiManagers */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		01CFA0192A5498C50003D55A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		01CFA01E2A5499240003D55A /* ApiManagers */ = {
+			isa = PBXGroup;
+			children = (
+				01CFA01F2A5499410003D55A /* UserApiManager.swift */,
+			);
+			path = ApiManagers;
+			sourceTree = "<group>";
+		};
 		01DE9F9B2A50EBB100FC1E71 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +148,11 @@
 		01DE9FA62A50EBB100FC1E71 /* PetTrackerIOS */ = {
 			isa = PBXGroup;
 			children = (
+				01CFA0192A5498C50003D55A /* Utilities */,
+				01CFA0182A5498B90003D55A /* Managers */,
+				01CFA0172A54984E0003D55A /* CustomViews */,
+				01CFA0162A5498400003D55A /* ViewControllers */,
 				01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */,
-				01016BFD2A545D9A00BE7787 /* HomeViewController.swift */,
 				01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */,
 				01DE9FAB2A50EBB200FC1E71 /* ViewController.swift */,
 				01DE9FB02A50EBB300FC1E71 /* Assets.xcassets */,
@@ -260,6 +312,10 @@
 				01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */,
 				01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */,
 				01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */,
+				01CFA0202A5499410003D55A /* UserApiManager.swift in Sources */,
+				01CFA0242A549A3F0003D55A /* CustomTextField.swift in Sources */,
+				01CFA01D2A54991D0003D55A /* RegisterViewController.swift in Sources */,
+				01CFA01B2A5499110003D55A /* LoginViewController.swift in Sources */,
 				01016BFE2A545D9A00BE7787 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
