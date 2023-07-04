@@ -24,17 +24,21 @@ class CustomTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(placeholder : String, leftIcon : UIImage , isSecure: Bool) {
+    convenience init(placeholder : String, leftIcon : UIImage? = nil , isSecure: Bool) {
         self.init()
         
-        leftImageView.image = leftIcon
-        leftImageView.frame = CGRect(x:5,y:0,width: 20,height: 20)
-        
-        let uiview = UIView(frame: CGRect(x: 0, y: 0, width: 25, height:20))
-        uiview.addSubview(leftImageView)
-        
-        self.leftView = uiview
-        self.leftViewMode = .always
+        if leftIcon != nil {
+            
+            leftImageView.image = leftIcon
+            leftImageView.frame = CGRect(x:5,y:0,width: 20,height: 20)
+            
+            let uiview = UIView(frame: CGRect(x: 0, y: 0, width: 25, height:20))
+            uiview.addSubview(leftImageView)
+            
+            self.leftView = uiview
+            self.leftViewMode = .always
+        }
+       
         
         if isSecure
         {
