@@ -133,7 +133,7 @@ extension LoginViewController {
             GlobalInformations.name = response.data.name
             GlobalInformations.userId = response.data.userId
             
-            let homeViewController = HomeViewController()
+            let homeViewController = ContainerViewController()
             self.navigationController?.pushViewController(homeViewController, animated: true)
             
         }
