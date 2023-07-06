@@ -15,6 +15,19 @@
 		01CFA0262A54B8160003D55A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0252A54B8160003D55A /* CustomButton.swift */; };
 		01CFA0282A54BE2A0003D55A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA0272A54BE2A0003D55A /* AlertHelper.swift */; };
 		01CFA02C2A54BF230003D55A /* UserMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */; };
+		01D1263D2A56E7EC004BA1BD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01D1263C2A56E7EC004BA1BD /* Alamofire */; };
+		01D1263F2A56E933004BA1BD /* UrlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D1263E2A56E933004BA1BD /* UrlConstants.swift */; };
+		01D126412A56E9B3004BA1BD /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126402A56E9B3004BA1BD /* LoginRequest.swift */; };
+		01D126432A56E9E1004BA1BD /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126422A56E9E1004BA1BD /* LoginResponse.swift */; };
+		01D126452A56EB92004BA1BD /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126442A56EB92004BA1BD /* BaseResponse.swift */; };
+		01D1264A2A56EF16004BA1BD /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126492A56EF16004BA1BD /* LoginResponseModel.swift */; };
+		01D1264C2A56F05C004BA1BD /* Encrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D1264B2A56F05C004BA1BD /* Encrypter.swift */; };
+		01D1264E2A56F10F004BA1BD /* CryptoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D1264D2A56F10F004BA1BD /* CryptoConstants.swift */; };
+		01D126502A56F174004BA1BD /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D1264F2A56F174004BA1BD /* RegisterRequest.swift */; };
+		01D126522A56F1CC004BA1BD /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126512A56F1CC004BA1BD /* RegisterResponse.swift */; };
+		01D126542A56F1F1004BA1BD /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126532A56F1F1004BA1BD /* RegisterResponseModel.swift */; };
+		01D126582A56F7BE004BA1BD /* PetApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126572A56F7BE004BA1BD /* PetApiManager.swift */; };
+		01D1265A2A56FCAD004BA1BD /* GlobalInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D126592A56FCAD004BA1BD /* GlobalInformations.swift */; };
 		01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */; };
 		01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */; };
 		01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9FAB2A50EBB200FC1E71 /* ViewController.swift */; };
@@ -51,6 +64,18 @@
 		01CFA0252A54B8160003D55A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		01CFA0272A54BE2A0003D55A /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageConstants.swift; sourceTree = "<group>"; };
+		01D1263E2A56E933004BA1BD /* UrlConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConstants.swift; sourceTree = "<group>"; };
+		01D126402A56E9B3004BA1BD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		01D126422A56E9E1004BA1BD /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		01D126442A56EB92004BA1BD /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		01D126492A56EF16004BA1BD /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		01D1264B2A56F05C004BA1BD /* Encrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypter.swift; sourceTree = "<group>"; };
+		01D1264D2A56F10F004BA1BD /* CryptoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoConstants.swift; sourceTree = "<group>"; };
+		01D1264F2A56F174004BA1BD /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		01D126512A56F1CC004BA1BD /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		01D126532A56F1F1004BA1BD /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
+		01D126572A56F7BE004BA1BD /* PetApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetApiManager.swift; sourceTree = "<group>"; };
+		01D126592A56FCAD004BA1BD /* GlobalInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalInformations.swift; sourceTree = "<group>"; };
 		01DE9FA42A50EBB100FC1E71 /* PetTrackerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTrackerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE9FA72A50EBB200FC1E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DE9FA92A50EBB200FC1E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D1263D2A56E7EC004BA1BD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				01CFA0272A54BE2A0003D55A /* AlertHelper.swift */,
+				01D1264B2A56F05C004BA1BD /* Encrypter.swift */,
+				01D126592A56FCAD004BA1BD /* GlobalInformations.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -129,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				01CFA01F2A5499410003D55A /* UserApiManager.swift */,
+				01D126572A56F7BE004BA1BD /* PetApiManager.swift */,
 			);
 			path = ApiManagers;
 			sourceTree = "<group>";
@@ -136,6 +165,7 @@
 		01CFA0292A54BF0C0003D55A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01D1263A2A56E64B004BA1BD /* DataTransferObjects */,
 				01CFA02A2A54BF140003D55A /* Constants */,
 			);
 			path = Models;
@@ -145,8 +175,48 @@
 			isa = PBXGroup;
 			children = (
 				01CFA02B2A54BF230003D55A /* UserMessageConstants.swift */,
+				01D1263E2A56E933004BA1BD /* UrlConstants.swift */,
+				01D1264D2A56F10F004BA1BD /* CryptoConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		01D1263A2A56E64B004BA1BD /* DataTransferObjects */ = {
+			isa = PBXGroup;
+			children = (
+				01D126482A56EEE0004BA1BD /* ResponseModels */,
+				01D126472A56EED7004BA1BD /* Responses */,
+				01D126462A56EEC8004BA1BD /* Requests */,
+			);
+			path = DataTransferObjects;
+			sourceTree = "<group>";
+		};
+		01D126462A56EEC8004BA1BD /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				01D126402A56E9B3004BA1BD /* LoginRequest.swift */,
+				01D1264F2A56F174004BA1BD /* RegisterRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		01D126472A56EED7004BA1BD /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				01D126442A56EB92004BA1BD /* BaseResponse.swift */,
+				01D126422A56E9E1004BA1BD /* LoginResponse.swift */,
+				01D126512A56F1CC004BA1BD /* RegisterResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		01D126482A56EEE0004BA1BD /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				01D126492A56EF16004BA1BD /* LoginResponseModel.swift */,
+				01D126532A56F1F1004BA1BD /* RegisterResponseModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 		01DE9F9B2A50EBB100FC1E71 = {
@@ -220,6 +290,9 @@
 			dependencies = (
 			);
 			name = PetTrackerIOS;
+			packageProductDependencies = (
+				01D1263C2A56E7EC004BA1BD /* Alamofire */,
+			);
 			productName = PetTrackerIOS;
 			productReference = 01DE9FA42A50EBB100FC1E71 /* PetTrackerIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 01DE9F9B2A50EBB100FC1E71;
+			packageReferences = (
+				01D1263B2A56E7EC004BA1BD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 01DE9FA52A50EBB100FC1E71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,15 +410,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D126452A56EB92004BA1BD /* BaseResponse.swift in Sources */,
 				01DE9FAC2A50EBB200FC1E71 /* ViewController.swift in Sources */,
+				01D126412A56E9B3004BA1BD /* LoginRequest.swift in Sources */,
 				01DE9FA82A50EBB200FC1E71 /* AppDelegate.swift in Sources */,
+				01D126502A56F174004BA1BD /* RegisterRequest.swift in Sources */,
 				01CFA0262A54B8160003D55A /* CustomButton.swift in Sources */,
+				01D1265A2A56FCAD004BA1BD /* GlobalInformations.swift in Sources */,
 				01DE9FAA2A50EBB200FC1E71 /* SceneDelegate.swift in Sources */,
 				01CFA0202A5499410003D55A /* UserApiManager.swift in Sources */,
+				01D126432A56E9E1004BA1BD /* LoginResponse.swift in Sources */,
+				01D1264C2A56F05C004BA1BD /* Encrypter.swift in Sources */,
+				01D126582A56F7BE004BA1BD /* PetApiManager.swift in Sources */,
 				01CFA0242A549A3F0003D55A /* CustomTextField.swift in Sources */,
 				01CFA01D2A54991D0003D55A /* RegisterViewController.swift in Sources */,
 				01CFA01B2A5499110003D55A /* LoginViewController.swift in Sources */,
+				01D126522A56F1CC004BA1BD /* RegisterResponse.swift in Sources */,
+				01D126542A56F1F1004BA1BD /* RegisterResponseModel.swift in Sources */,
 				01CFA0282A54BE2A0003D55A /* AlertHelper.swift in Sources */,
+				01D1264A2A56EF16004BA1BD /* LoginResponseModel.swift in Sources */,
+				01D1264E2A56F10F004BA1BD /* CryptoConstants.swift in Sources */,
+				01D1263F2A56E933004BA1BD /* UrlConstants.swift in Sources */,
 				01CFA02C2A54BF230003D55A /* UserMessageConstants.swift in Sources */,
 				01016BFE2A545D9A00BE7787 /* HomeViewController.swift in Sources */,
 			);
@@ -678,6 +766,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01D1263B2A56E7EC004BA1BD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01D1263C2A56E7EC004BA1BD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01D1263B2A56E7EC004BA1BD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01DE9F9C2A50EBB100FC1E71 /* Project object */;
 }

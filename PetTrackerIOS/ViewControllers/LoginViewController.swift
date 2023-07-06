@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     let passwordTextField = CustomTextField(placeholder: "Password", leftIcon: UIImage(named:"passkeyIcon")!, isSecure: true)
     let loginButton = CustomButton(caption: "Login")
     let registerButton = CustomButton(caption: "Register")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     }
     
     func initViewObjects(){
-       
+        
         loginImageView.image = UIImage(named:"cute-dogs")
         loginImageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
             loginImageView.widthAnchor.constraint(equalToConstant: 250),
             loginImageView.heightAnchor.constraint(equalToConstant: 180)
         ])
-      
+        
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: loginImageView.bottomAnchor, constant: 30),
@@ -88,6 +88,7 @@ class LoginViewController: UIViewController {
     
     func initActions(){
         loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
     }
     
 }
@@ -103,11 +104,37 @@ extension LoginViewController {
         if enteredUsername.isEmpty || enteredPassword.isEmpty {
             
             AlertHelper.showBasicAlert(message: UserMessageConstants.loginValidationFailedMessage, viewController: self)
+            return
+        }
+        
+        var encryptedPassword = AES(key: CrypteConstants.clientEncryptionKey, initializeVectorParameter: CrypteConstants.initializeVector)?.encrypt(string: enteredPassword)
+        
+        var loginRequest = LoginRequest()
+        loginRequest.username = enteredUsername
+        loginRequest.password = (encryptedPassword?.base64EncodedString())!
+        
+        UserApiManager.login(loginRequest: loginRequest) { response in
+            
+            if !response.isSuccess {
+                AlertHelper.showBasicAlert(message: UserMessageConstants.loginFailedMessage, viewController: self)
+                return
+            }
+            
+            GlobalInformations.name = response.data.name
+            GlobalInformations.userId = response.data.userId
+            
+            var homeViewController = HomeViewController()
+            self.navigationController?.pushViewController(homeViewController, animated: true)
+            
         }
         
     }
     
     @objc func register() {
+        
+        let registerViewController = RegisterViewController()
+        
+        navigationController?.present(registerViewController, animated: true)
         
     }
     
