@@ -11,5 +11,6 @@ class GlobalInformations {
     
     public static var userId = UUID()
     public static var name = ""
+    public static var dateFormat = "dd/MM/yy"
     
 }

@@ -112,17 +112,61 @@ extension RegisterViewController {
     
     @objc func register(){
         
-        var enteredName = nameTextField.text ?? ""
-        var enteredPhone = phoneTextField.text ?? ""
-        var enteredEmail = emailTextField.text ?? ""
-        var enteredPassword = passwordTextField.text ?? ""
-        var enteredPasswordRepeat = passwordCheckTextField.text ?? ""
-        var enteredBirthdate = birthDateTextField.text ?? ""
+        let enteredName = nameTextField.text ?? ""
+        let enteredPhone = phoneTextField.text ?? ""
+        let enteredEmail = emailTextField.text ?? ""
+        let enteredPassword = passwordTextField.text ?? ""
+        let enteredPasswordRepeat = passwordCheckTextField.text ?? ""
+        let enteredBirthdate = birthDateTextField.text ?? ""
         
         if enteredName.isEmpty || enteredPhone.isEmpty || enteredEmail.isEmpty || enteredPassword.isEmpty || enteredPasswordRepeat.isEmpty || enteredBirthdate.isEmpty {
             
             AlertHelper.showBasicAlert(message: UserMessageConstants.registerValidationMessageForEmptyField , viewController: self)
             return
+        }
+        
+        if enteredPassword != enteredPasswordRepeat {
+            AlertHelper.showBasicAlert(message: UserMessageConstants.registerValidationMessageForPasswordMismatch, viewController: self)
+            return
+        }
+        
+        let encryptedPassword = AES(key: CrypteConstants.clientEncryptionKey, initializeVectorParameter: CrypteConstants.initializeVector)?.encrypt(string: enteredPassword)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = GlobalInformations.dateFormat
+        
+        let registerRequest = RegisterRequest()
+        
+        if let birthDate = dateFormatter.date(from: enteredBirthdate) {
+            registerRequest.birthDate = birthDate
+        }
+        
+        if let password = encryptedPassword?.base64EncodedString() {
+            registerRequest.password = password
+        }
+        
+        registerRequest.email = enteredEmail
+        registerRequest.email = enteredEmail
+        registerRequest.phone = enteredPhone
+        
+        UserApiManager.register(registerRequest: registerRequest) { response in
+            
+            if !response.isSuccess {
+                
+                var errorMessage = UserMessageConstants.registerFailedMessage
+                
+                for message in response.messages {
+                    errorMessage += message
+                }
+                
+                AlertHelper.showBasicAlert(message: errorMessage, viewController: self)
+                return
+            }
+            
+            AlertHelper.showBasicAlert(message: UserMessageConstants.registerSuccessfull, viewController: self)
+            
+            self.dismiss(animated: true)
+            
         }
     }
 }

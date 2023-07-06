@@ -14,5 +14,7 @@ class UserMessageConstants{
     static let registerValidationMessageForEmptyField = "Please fill all fields"
     static let registerValidationMessageForPasswordMismatch = "Passwords are mismatching"
     static let loginFailedMessage = "Login failed please check username and password"
+    static let registerFailedMessage = "Register failed please contact with application owner"
+    static let registerSuccessfull = "Register successful"
     
 }

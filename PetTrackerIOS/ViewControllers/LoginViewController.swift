@@ -107,23 +107,33 @@ extension LoginViewController {
             return
         }
         
-        var encryptedPassword = AES(key: CrypteConstants.clientEncryptionKey, initializeVectorParameter: CrypteConstants.initializeVector)?.encrypt(string: enteredPassword)
+        let encryptedPassword = AES(key: CrypteConstants.clientEncryptionKey, initializeVectorParameter: CrypteConstants.initializeVector)?.encrypt(string: enteredPassword)
         
-        var loginRequest = LoginRequest()
+        let loginRequest = LoginRequest()
         loginRequest.username = enteredUsername
-        loginRequest.password = (encryptedPassword?.base64EncodedString())!
+        
+        if let password = encryptedPassword?.base64EncodedString() {
+            loginRequest.password = password
+        }
         
         UserApiManager.login(loginRequest: loginRequest) { response in
             
             if !response.isSuccess {
-                AlertHelper.showBasicAlert(message: UserMessageConstants.loginFailedMessage, viewController: self)
+                
+                var errorMessage = UserMessageConstants.loginFailedMessage
+                
+                for message in response.messages {
+                    errorMessage += message
+                }
+                
+                AlertHelper.showBasicAlert(message: errorMessage, viewController: self)
                 return
             }
             
             GlobalInformations.name = response.data.name
             GlobalInformations.userId = response.data.userId
             
-            var homeViewController = HomeViewController()
+            let homeViewController = HomeViewController()
             self.navigationController?.pushViewController(homeViewController, animated: true)
             
         }
@@ -133,7 +143,6 @@ extension LoginViewController {
     @objc func register() {
         
         let registerViewController = RegisterViewController()
-        
         navigationController?.present(registerViewController, animated: true)
         
     }
